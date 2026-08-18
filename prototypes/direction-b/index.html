@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FU JIAHE — Building businesses for the AI era.">
+  <title>FU JIAHE — Editorial Leader Direction</title>
+  <style>
+    :root {
+      --paper: #f5f0e7;
+      --paper-deep: #eee7dc;
+      --ink: #151413;
+      --rust: #a63520;
+      --muted: #66625d;
+      --line: rgba(21, 20, 19, 0.24);
+      --max: 90rem;
+      --edge: clamp(1.25rem, 3vw, 3.25rem);
+      --rail: clamp(2.4rem, 6vw, 6.5rem);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    figure { margin: 0; }
+
+    a:focus-visible {
+      outline: 3px solid var(--rust);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 30;
+      top: 0.75rem;
+      left: 0.75rem;
+      padding: 0.75rem 1rem;
+      color: var(--paper);
+      background: var(--ink);
+      transform: translateY(-150%);
+      transition: transform 160ms ease;
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .frame {
+      width: min(100%, var(--max));
+      margin-inline: auto;
+      padding-inline: var(--edge);
+    }
+
+    .masthead {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .masthead-inner {
+      min-height: 5rem;
+      display: grid;
+      grid-template-columns: var(--rail) 1fr auto;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .monogram,
+    .wordmark {
+      color: var(--rust);
+      text-decoration: none;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+    }
+
+    .monogram { font-size: 1.35rem; }
+
+    .wordmark {
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.3rem, 2vw, 2rem);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav a {
+      display: inline-flex;
+      min-height: 2.75rem;
+      align-items: center;
+      padding-inline: 0.25rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.75rem;
+    }
+
+    nav a:hover { color: var(--rust); }
+
+    .numbered-section {
+      position: relative;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 1rem;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: var(--rail) minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .section-no {
+      padding-top: clamp(2.2rem, 5vw, 5rem);
+      border-right: 1px solid var(--line);
+      color: var(--rust);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.05rem;
+      font-variant-numeric: oldstyle-nums;
+    }
+
+    .section-content { min-width: 0; }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+      min-height: 49rem;
+    }
+
+    .hero-copy {
+      align-self: center;
+      padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 6vw, 7rem) clamp(4rem, 8vw, 7rem) clamp(1rem, 3.2vw, 3.25rem);
+    }
+
+    h1,
+    h2,
+    h3,
+    .pullquote {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(4rem, 8.7vw, 8.8rem);
+      font-weight: 500;
+      line-height: 0.88;
+      letter-spacing: -0.055em;
+    }
+
+    .hero-kicker {
+      margin: 1.6rem 0 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 3.2vw, 3.25rem);
+      line-height: 1.08;
+    }
+
+    .territory {
+      margin: 2rem 0 0;
+      color: var(--rust);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      line-height: 1.7;
+      text-transform: uppercase;
+    }
+
+    .hero-statement {
+      max-width: 35rem;
+      margin: 2.3rem 0 0;
+      padding: 1.6rem 0 0 1.5rem;
+      border-top: 2px solid var(--rust);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.25rem, 1.8vw, 1.7rem);
+      line-height: 1.4;
+    }
+
+    .hero-portrait {
+      min-height: 100%;
+      overflow: hidden;
+      background: #c6c8cc;
+    }
+
+    .hero-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 20%;
+      filter: saturate(0.8) contrast(0.98);
+      transform: scale(1.025);
+    }
+
+    .section-pad { padding-block: clamp(4.5rem, 8vw, 8rem); }
+
+    .heading-row {
+      display: grid;
+      grid-template-columns: minmax(14rem, 0.72fr) minmax(0, 1.28fr);
+      align-items: end;
+      gap: clamp(2rem, 6vw, 7rem);
+      margin-bottom: clamp(2.75rem, 5vw, 5rem);
+    }
+
+    .heading-row h2 {
+      margin: 0;
+      font-size: clamp(2.8rem, 5vw, 5.2rem);
+      font-weight: 500;
+      line-height: 0.97;
+      letter-spacing: -0.045em;
+    }
+
+    .heading-row p {
+      max-width: 32rem;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .work-list {
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--line);
+      list-style: none;
+    }
+
+    .work-entry {
+      display: grid;
+      grid-template-columns: 6.5rem minmax(14rem, 0.9fr) minmax(18rem, 1.1fr);
+      gap: clamp(1rem, 4vw, 5rem);
+      align-items: start;
+      padding-block: clamp(2rem, 4vw, 3.5rem);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .case-no {
+      color: var(--rust);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.5rem, 5.5vw, 6rem);
+      line-height: 0.85;
+    }
+
+    .work-entry h3 {
+      margin: 0;
+      font-size: clamp(1.55rem, 2.5vw, 2.6rem);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .work-entry p {
+      max-width: 40rem;
+      margin: 0;
+      color: #47433f;
+      font-size: clamp(1rem, 1.25vw, 1.16rem);
+      line-height: 1.65;
+    }
+
+    .transformation { background: var(--paper-deep); }
+
+    .transformation-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.76fr);
+      gap: clamp(3rem, 9vw, 10rem);
+      align-items: center;
+    }
+
+    .transformation h2 {
+      max-width: 12ch;
+      margin: 1.4rem 0 0;
+      font-size: clamp(3rem, 6.2vw, 6.4rem);
+      font-weight: 500;
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--rust);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .system {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .system li {
+      font-size: clamp(1rem, 1.4vw, 1.25rem);
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .system li:not(:last-child)::after {
+      content: "↓";
+      display: block;
+      margin-block: 0.55rem;
+      color: var(--rust);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    .supporting {
+      margin: 3rem 0 0;
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.08rem;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .principle-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--line);
+      list-style: none;
+      counter-reset: principles;
+    }
+
+    .principle-grid li {
+      min-height: 14rem;
+      padding: 1.8rem clamp(1.5rem, 3vw, 3rem) 2.3rem 0;
+      border-bottom: 1px solid var(--line);
+      counter-increment: principles;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.2rem, 1.9vw, 1.8rem);
+      line-height: 1.28;
+    }
+
+    .principle-grid li::before {
+      content: "0" counter(principles);
+      display: block;
+      margin-bottom: 2rem;
+      color: var(--rust);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
+    .principle-grid li:not(:nth-child(3n)) {
+      margin-right: clamp(1.5rem, 3vw, 3rem);
+      border-right: 1px solid var(--line);
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 1.22fr);
+      gap: clamp(3rem, 9vw, 10rem);
+    }
+
+    .pullquote {
+      margin: 1.4rem 0 0;
+      color: var(--rust);
+      font-size: clamp(2.3rem, 4.4vw, 4.6rem);
+      font-style: italic;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    .about-copy {
+      align-self: end;
+      color: #3f3b37;
+      font-size: clamp(1rem, 1.35vw, 1.2rem);
+      line-height: 1.72;
+    }
+
+    .about-copy p { margin: 0 0 1.25rem; }
+
+    footer .section-content { padding-block: clamp(3.5rem, 6vw, 6rem); }
+
+    .contact-line {
+      display: grid;
+      grid-template-columns: minmax(14rem, 0.7fr) repeat(2, minmax(12rem, 0.65fr));
+      gap: 2rem;
+      align-items: end;
+    }
+
+    .contact-line h2 {
+      margin: 0;
+      font-size: clamp(2.6rem, 4.5vw, 4.8rem);
+      font-weight: 500;
+      letter-spacing: -0.04em;
+    }
+
+    .contact-line div {
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-line span {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--rust);
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .contact-line p { margin: 0; font-size: 1.12rem; }
+
+    .legal {
+      grid-column: 2;
+      padding-bottom: 1.25rem;
+      color: var(--muted);
+      font-size: 0.7rem;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-copy > *, .hero-portrait {
+        animation: editorial-in 700ms both cubic-bezier(0.2, 0.65, 0.2, 1);
+      }
+      .hero-copy > :nth-child(2) { animation-delay: 70ms; }
+      .hero-copy > :nth-child(3) { animation-delay: 140ms; }
+      .hero-copy > :nth-child(4) { animation-delay: 210ms; }
+      .hero-portrait { animation-delay: 110ms; }
+    }
+
+    @keyframes editorial-in {
+      from { opacity: 0; transform: translateY(0.85rem); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 900px) {
+      .hero-content { grid-template-columns: 1fr; }
+      .hero-portrait { min-height: 36rem; }
+      .heading-row { grid-template-columns: 1fr; gap: 1.5rem; }
+      .work-entry { grid-template-columns: 5rem 1fr; }
+      .work-entry p { grid-column: 2; }
+      .transformation-inner, .about-inner { grid-template-columns: 1fr; }
+      .system { text-align: left; }
+      .principle-grid { grid-template-columns: repeat(2, 1fr); }
+      .principle-grid li:not(:nth-child(3n)) { margin-right: 0; border-right: 0; }
+      .principle-grid li:nth-child(odd) { margin-right: 2rem; border-right: 1px solid var(--line); }
+      .contact-line { grid-template-columns: 1fr 1fr; }
+      .contact-line h2 { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 620px) {
+      .masthead-inner { grid-template-columns: 2.4rem 1fr; align-items: start; padding-block: 0.75rem; }
+      .wordmark { min-height: 2.75rem; display: inline-flex; align-items: center; }
+      nav { grid-column: 1 / -1; }
+      nav ul { justify-content: space-between; gap: 0; }
+      nav a { font-size: 0.7rem; }
+      .section-grid { grid-template-columns: 2.4rem minmax(0, 1fr); gap: 1rem; }
+      .section-no { font-size: 0.82rem; }
+      .hero-copy { padding: 4rem 0 3.5rem; }
+      h1 { font-size: clamp(3.8rem, 19vw, 5.2rem); }
+      .hero-kicker { font-size: 2rem; }
+      .hero-portrait { min-height: 28rem; margin-right: calc(var(--edge) * -1); }
+      .section-pad { padding-block: 4rem; }
+      .work-entry { grid-template-columns: 1fr; gap: 0.9rem; }
+      .work-entry p { grid-column: auto; }
+      .principle-grid { grid-template-columns: 1fr; }
+      .principle-grid li { min-height: auto; padding-block: 1.6rem; }
+      .principle-grid li:nth-child(odd) { margin-right: 0; border-right: 0; }
+      .principle-grid li::before { margin-bottom: 1.2rem; }
+      .contact-line { grid-template-columns: 1fr; }
+      .contact-line h2 { grid-column: auto; }
+      .legal { grid-column: 2; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="masthead">
+    <div class="frame masthead-inner">
+      <a class="monogram" href="#top" aria-label="FU JIAHE, back to top">FJ</a>
+      <a class="wordmark" href="#top">FU JIAHE / Business Builder</a>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#transformation">AI Transformation</a></li>
+          <li><a href="#principles">Principles</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="numbered-section" id="top" aria-labelledby="hero-title">
+      <div class="frame section-grid">
+        <div class="section-no" aria-hidden="true">01</div>
+        <div class="section-content hero-content">
+          <div class="hero-copy">
+            <h1 id="hero-title">FU JIAHE</h1>
+            <p class="hero-kicker">Building businesses for the AI era.</p>
+            <p class="territory">Strategy &nbsp;·&nbsp; AI Transformation &nbsp;·&nbsp; Enterprise Growth</p>
+            <p class="hero-statement">“I turn emerging opportunities into business systems — shaping direction, building mechanisms and leading teams to results.”</p>
+          </div>
+          <figure class="hero-portrait">
+            <img src="../assets/portrait.jpg" alt="Portrait of Fu Jiahe" width="2079" height="2952">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="numbered-section" id="work" aria-labelledby="work-title">
+      <div class="frame section-grid">
+        <div class="section-no" aria-hidden="true">02</div>
+        <div class="section-content section-pad">
+          <header class="heading-row">
+            <h2 id="work-title">Selected Work</h2>
+            <p>Leadership cases in shaping direction, connecting signals and building mechanisms that can scale.</p>
+          </header>
+          <ol class="work-list">
+            <li class="work-entry">
+              <span class="case-no" aria-hidden="true">01</span>
+              <h3>Reframing an Enterprise Growth Model</h3>
+              <p>Rethinking segmentation, qualification and product paths to build a more scalable commercial system.</p>
+            </li>
+            <li class="work-entry">
+              <span class="case-no" aria-hidden="true">02</span>
+              <h3>Building a Customer Growth Decision System</h3>
+              <p>Connecting customer behavior, commercial outcomes and product signals to reshape renewal and expansion decisions.</p>
+            </li>
+            <li class="work-entry">
+              <span class="case-no" aria-hidden="true">03</span>
+              <h3>Turning Market Intelligence into Business Direction</h3>
+              <p>Translating fragmented market, competitive and operating signals into decisions leadership teams can act on.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="numbered-section transformation" id="transformation" aria-labelledby="transformation-title">
+      <div class="frame section-grid">
+        <div class="section-no" aria-hidden="true">03</div>
+        <div class="section-content section-pad transformation-inner">
+          <div>
+            <p class="eyebrow">AI Transformation</p>
+            <h2 id="transformation-title">Tools don't transform businesses. Workflows do.</h2>
+            <p class="supporting">If the workflow hasn’t changed, the business hasn’t transformed.</p>
+          </div>
+          <ol class="system" aria-label="AI transformation hierarchy">
+            <li>Tools</li>
+            <li>Workflows</li>
+            <li>Operating Model</li>
+            <li>People</li>
+            <li>Business Outcomes</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="numbered-section" id="principles" aria-labelledby="principles-title">
+      <div class="frame section-grid">
+        <div class="section-no" aria-hidden="true">04</div>
+        <div class="section-content section-pad">
+          <header class="heading-row">
+            <h2 id="principles-title">Principles</h2>
+            <p>Six working beliefs about judgment, growth, customers, transformation and leverage.</p>
+          </header>
+          <ol class="principle-grid">
+            <li>Execution is getting cheaper. Judgment is not.</li>
+            <li>Strategy is deciding what not to do.</li>
+            <li>Growth is continuously earning product–market fit.</li>
+            <li>Listen to customers. Do not outsource judgment to them.</li>
+            <li>If the workflow hasn’t changed, the business hasn’t transformed.</li>
+            <li>AI should make exceptional people more leveraged, not simply make organizations smaller.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="numbered-section" id="about" aria-labelledby="about-title">
+      <div class="frame section-grid">
+        <div class="section-no" aria-hidden="true">05</div>
+        <div class="section-content section-pad about-inner">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2 class="pullquote" id="about-title">Engineer by training.<br>Business builder by career.<br>Curious by nature.</h2>
+          </div>
+          <div class="about-copy">
+            <p>I studied engineering in Australia and built my career in China. The journey moved from Beijing to Shenzhen, from education to technology, and from larger organizations to a smaller, faster environment.</p>
+            <p>The pattern across those transitions is less a chronology than a point of view: understand complexity, choose the direction that matters, and turn it into systems people can use.</p>
+            <p>I am currently pursuing an MBA at HKUST to deepen that perspective for the next chapter of business and leadership.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="numbered-section" id="contact">
+    <div class="frame section-grid">
+      <div class="section-no" aria-hidden="true">06</div>
+      <div class="section-content">
+        <div class="contact-line">
+          <h2>Contact</h2>
+          <div><span>Email</span><p>Available on request</p></div>
+          <div><span>WeChat</span><p>Chat_Away</p></div>
+        </div>
+      </div>
+      <div class="legal">© FU JIAHE. Prototype direction B.</div>
+    </div>
+  </footer>
+</body>
+</html>
