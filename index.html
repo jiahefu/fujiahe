@@ -1,99 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>FU JIAHE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #faf9f6;
-    color: #222;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+    <title>FU JIAHE</title>
 
-.container {
-    text-align: center;
-    max-width: 600px;
-    padding: 40px;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-h1 {
-    font-size: 56px;
-    font-weight: 400;
-    letter-spacing: 8px;
-    margin: 0 0 25px;
-}
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #f7f6f2;
+            color: #1f1f1f;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Helvetica Neue",
+                Arial,
+                sans-serif;
+        }
 
-.subtitle {
-    font-size: 18px;
-    letter-spacing: 2px;
-    color: #555;
-    margin-bottom: 35px;
-}
+        .page {
+            min-height: 100vh;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 64px 48px;
 
-.description {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #777;
-}
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 80px;
+        }
 
-.links {
-    margin-top: 55px;
-}
+        .intro {
+            flex: 1;
+        }
 
-.links span {
-    margin: 0 14px;
-    font-size: 14px;
-    color: #555;
-}
+        h1 {
+            margin: 0;
+            font-size: clamp(42px, 6vw, 68px);
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            line-height: 1;
+        }
 
-.year {
-    margin-top: 70px;
-    font-size: 13px;
-    color: #aaa;
-    letter-spacing: 2px;
-}
+        .role {
+            margin-top: 28px;
+            font-size: 15px;
+            letter-spacing: 0.16em;
+            color: #555;
+        }
 
-</style>
+        .description {
+            margin-top: 48px;
+            max-width: 380px;
+            font-size: 17px;
+            line-height: 1.7;
+            color: #777;
+        }
 
+        .meta {
+            margin-top: 72px;
+            font-size: 12px;
+            letter-spacing: 0.14em;
+            color: #aaa;
+        }
+
+        .portrait {
+            width: min(36vw, 360px);
+            aspect-ratio: 4 / 5;
+            flex-shrink: 0;
+            overflow: hidden;
+            background: #ddd;
+        }
+
+        .portrait img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @media (max-width: 760px) {
+
+            .page {
+                padding: 48px 28px 56px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 52px;
+            }
+
+            .portrait {
+                width: 100%;
+                max-width: none;
+                order: -1;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .description {
+                margin-top: 36px;
+            }
+
+            .meta {
+                margin-top: 48px;
+            }
+        }
+    </style>
 </head>
 
 
 <body>
 
-<div class="container">
+    <main class="page">
 
-<h1>FU JIAHE</h1>
+        <section class="intro">
 
-<div class="subtitle">
-Product · AI · Ideas
-</div>
+            <h1>FU JIAHE</h1>
 
-<div class="description">
-A personal space for projects,<br>
-thoughts and things worth remembering.
-</div>
+            <div class="role">
+                PRODUCT · AI · IDEAS
+            </div>
 
+            <div class="description">
+                A personal space for ideas,
+                projects and work in progress.
+            </div>
 
-<div class="links">
-<span>About</span>
-<span>Work</span>
-<span>Notes</span>
-<span>Contact</span>
-</div>
+            <div class="meta">
+                EST. 2026
+            </div>
 
-
-<div class="year">
-EST. 2026
-</div>
+        </section>
 
 
-</div>
+        <div class="portrait">
+            <img src="portrait.jpg" alt="FU JIAHE">
+        </div>
+
+    </main>
 
 </body>
+
 </html>
