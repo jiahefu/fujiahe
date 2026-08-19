@@ -8,7 +8,6 @@
   --muted-light: #a8a9a5;
   --line-dark: rgba(255, 255, 255, 0.18);
   --line-light: rgba(16, 17, 16, 0.18);
-  --focus: #c6a96c;
   --max: 86rem;
   --pad: clamp(1.25rem, 4vw, 4.75rem);
 }
@@ -45,8 +44,9 @@ figure {
 }
 
 a:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 4px;
+  outline: 3px solid var(--ivory);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--ink);
 }
 
 .skip-link {
@@ -634,7 +634,7 @@ h1 {
 
   nav a {
     padding-inline: 0.1rem;
-    font-size: 0.68rem;
+    font-size: 0.75rem;
   }
 
   h1 {
