@@ -298,6 +298,17 @@ h1 {
   letter-spacing: -0.035em;
 }
 
+.case-category {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--muted-dark);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
 .case-item p {
   max-width: 43rem;
   margin: 0;
