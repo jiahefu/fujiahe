@@ -1,0 +1,835 @@
+/* v1.4 current-locked integration: outer section adaptation only. */
+
+.current-locked-case01 {
+  color: var(--growth-ink);
+  background: var(--growth-paper);
+  border-block: 1px solid var(--growth-rule-soft);
+  padding-block: clamp(4.5rem, 6vw, 6.5rem);
+}
+
+.current-locked-case01 .preview-featured-layout {
+  grid-template-columns: minmax(0, .75fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+  margin-top: clamp(2.25rem, 3.5vw, 3.5rem);
+}
+
+.current-locked-case01 .preview-judgment {
+  max-width: 20ch;
+}
+
+@media (min-width: 1200px) {
+  .current-locked-case01 > .growth-shell {
+    width: min(100%, 78rem);
+  }
+}
+
+.current-locked-ai {
+  min-height: 0;
+  padding: 0;
+  color: var(--twin-ivory);
+  background: var(--twin-bg);
+}
+
+.current-locked-ai .integration-section {
+  min-height: min(58rem, 100svh);
+}
+
+.current-locked-ai .integration-layout {
+  padding-block: clamp(4.5rem, 8vw, 8rem);
+}
+
+.current-locked-ai .integration-copy h1 {
+  max-width: 10ch;
+  white-space: normal;
+}
+
+.about-formation-recomposed {
+  color: var(--ink);
+  background: var(--paper);
+  border-top: 1px solid var(--line-light);
+  padding-block: clamp(4.5rem, 6vw, 6.5rem) clamp(5rem, 7vw, 7.25rem);
+}
+
+.about-formation-intro {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: start;
+}
+
+.about-formation-intro h2 {
+  max-width: 11ch;
+  margin: 2.1rem 0 0;
+  font-size: clamp(3.2rem, 5.8vw, 6.1rem);
+  font-weight: 500;
+  line-height: .96;
+  letter-spacing: -.06em;
+}
+
+.about-formation-intro .about-copy {
+  max-width: 38rem;
+  padding-top: .2rem;
+  color: #4e4f4a;
+  font-size: clamp(1rem, 1.32vw, 1.2rem);
+  line-height: 1.72;
+}
+
+.formation-diptych {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  gap: clamp(1.35rem, 3vw, 3rem);
+  align-items: end;
+  margin-top: clamp(2rem, 3.25vw, 3.25rem);
+}
+
+.formation-diptych figure {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  min-width: 0;
+  min-height: 0;
+  height: clamp(19rem, 26vw, 23.5rem);
+}
+
+.formation-image-frame {
+  min-height: 0;
+  overflow: clip;
+}
+
+.formation-diptych img {
+  display: block;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.42) contrast(.97) brightness(1.02);
+}
+
+.formation-diptych figure:first-child img {
+  object-position: 64% 67%;
+  transform: scale(1.12);
+}
+
+.formation-diptych figure:nth-child(2) img {
+  object-position: 54% 0%;
+  transform: scale(1.28);
+  transform-origin: 54% 0%;
+}
+
+.formation-diptych figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: .65rem;
+  color: #63645e;
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .17em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.formation-diptych figcaption span:last-child {
+  text-align: right;
+}
+
+.beyond-work-recomposed {
+  color: var(--ink);
+  background: var(--ivory);
+  padding-block: clamp(4.5rem, 6vw, 6.5rem) clamp(5rem, 7vw, 7.25rem);
+}
+
+.beyond-work-intro {
+  display: grid;
+  grid-template-columns: minmax(0, .62fr) minmax(0, 1.38fr);
+  gap: clamp(2rem, 8vw, 8rem);
+  align-items: end;
+}
+
+.beyond-work-intro h2 {
+  margin: 1.8rem 0 0;
+  font-size: clamp(3.2rem, 5.8vw, 6rem);
+  font-weight: 500;
+  line-height: .96;
+  letter-spacing: -.06em;
+}
+
+.beyond-work-intro > p {
+  max-width: 27ch;
+  margin: 0;
+  color: #4d4e49;
+  font-size: clamp(1.75rem, 3.45vw, 3.55rem);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+
+.sheltie-spread {
+  display: grid;
+  grid-template-columns: minmax(0, 2.08fr) minmax(14rem, .92fr);
+  gap: clamp(1.2rem, 3vw, 3rem);
+  align-items: start;
+  margin-top: clamp(2rem, 2.8vw, 2.75rem);
+}
+
+.sheltie-spread figure {
+  min-width: 0;
+  overflow: clip;
+}
+
+.sheltie-spread img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.9) contrast(.98) brightness(1.01);
+}
+
+.sheltie-dominant {
+  aspect-ratio: 1.82 / 1;
+}
+
+.sheltie-supporting {
+  aspect-ratio: 4 / 5;
+}
+
+.sheltie-spread img {
+  height: 100%;
+}
+
+.sheltie-supporting img {
+  object-position: 50% 35%;
+}
+
+.sheltie-dominant img {
+  object-position: 50% 62%;
+}
+
+.portrait-wrap {
+  overflow: clip;
+}
+
+.sheltie-spread figcaption {
+  padding-top: .8rem;
+  color: #63645e;
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .17em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .about-formation-intro,
+  .beyond-work-intro {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .about-formation-intro .about-copy {
+    padding-top: 0;
+  }
+
+  .sheltie-spread {
+    grid-template-columns: 1fr;
+  }
+
+  .sheltie-supporting {
+    width: 82%;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .current-locked-ai .integration-layout {
+    padding-block: 4.5rem 3rem;
+  }
+
+  .about-formation-recomposed,
+  .beyond-work-recomposed {
+    padding-block: 4.5rem 5rem;
+  }
+
+  .about-formation-intro h2,
+  .beyond-work-intro h2 {
+    font-size: 3.3rem;
+  }
+
+  .formation-diptych {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    margin-top: 2.25rem;
+  }
+
+  .formation-diptych figure {
+    height: calc((100vw - (2 * var(--pad))) / 1.72 + 2.15rem);
+  }
+
+  .formation-diptych figcaption {
+    display: block;
+  }
+
+  .formation-diptych figcaption span {
+    display: block;
+  }
+
+  .formation-diptych figcaption span + span {
+    margin-top: .35rem;
+  }
+
+  .formation-diptych figcaption span:last-child {
+    text-align: left;
+  }
+
+  .beyond-work-intro > p {
+    max-width: 20ch;
+    font-size: 2.2rem;
+  }
+
+  .sheltie-spread {
+    gap: 2.4rem;
+    margin-top: 2.25rem;
+  }
+
+  .sheltie-dominant {
+    aspect-ratio: 1.45 / 1;
+  }
+
+  .sheltie-supporting {
+    width: 82%;
+  }
+}
+
+@media (max-width: 340px) {
+  .current-locked-case01 .judgment-title {
+    font-size: clamp(1.65rem, 8vw, 2.15rem);
+  }
+}
+
+/* v1.4 final editorial correction: outer composition and responsive measure. */
+
+/* Hero portrait: remove the shell inset that reads as a light frame. */
+.hero-grid {
+  width: 100%;
+  max-width: none;
+  padding-right: 0;
+}
+
+.hero-grid .portrait-wrap {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.hero-grid .portrait-wrap img {
+  border: 0;
+  transform: scale(1.04);
+  transform-origin: center;
+}
+
+/* Featured Case title: give the headline a real editorial measure. */
+.current-locked-case01 .preview-featured-header {
+  grid-template-columns: minmax(0, 1.15fr) minmax(12rem, .5fr);
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.current-locked-case01 .preview-featured-header h2 {
+  max-width: 22ch;
+  font-size: clamp(2.8rem, 4.5vw, 5rem);
+}
+
+.current-locked-case01 .preview-featured-header .preview-meta {
+  align-self: end;
+}
+
+/* Homepage Lite: one compact Decision Field with a clear signals -> judgment -> paths flow. */
+.current-locked-case01 .embedded-decision-artifact .evidence-plate {
+  grid-template-columns: minmax(7rem, .24fr) minmax(0, .76fr);
+  min-height: 0;
+  padding-block: clamp(2rem, 3.3vw, 3.2rem) 0;
+}
+
+.current-locked-case01 .embedded-decision-artifact .before-column {
+  align-self: stretch;
+  padding-right: clamp(1rem, 2.4vw, 2rem);
+  border-right: 1px solid var(--growth-rule);
+}
+
+.current-locked-case01 .embedded-decision-artifact .after-field {
+  padding-inline: clamp(1.2rem, 2.6vw, 2.7rem);
+}
+
+.current-locked-case01 .embedded-decision-artifact .zone-title {
+  margin-top: 1.15rem;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.current-locked-case01 .embedded-decision-artifact .before-outcome {
+  margin-top: clamp(3rem, 5vw, 4.5rem);
+}
+
+.current-locked-case01 .homepage-lite .lite-signal-line {
+  max-width: 34ch;
+  margin-top: clamp(1.6rem, 2.7vw, 2.4rem);
+  font-size: clamp(.95rem, 1.3vw, 1.15rem);
+  line-height: 1.4;
+}
+
+.current-locked-case01 .judgment-band {
+  max-width: 34rem;
+  margin-top: clamp(2.2rem, 4vw, 3.8rem);
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--growth-rule);
+}
+
+.current-locked-case01 .judgment-band .judgment-kicker {
+  margin: 0 0 .65rem;
+  color: var(--growth-stone);
+  font-size: .6rem;
+  text-align: left;
+}
+
+.current-locked-case01 .judgment-band .judgment-title {
+  max-width: 12ch;
+  font-size: clamp(1.7rem, 2.45vw, 2.45rem);
+  line-height: .95;
+  text-align: left;
+}
+
+.current-locked-case01 .path-band {
+  margin-top: clamp(1.8rem, 3vw, 2.7rem);
+  padding-top: 1.05rem;
+  border-top: 1px solid var(--growth-rule);
+}
+
+.current-locked-case01 .path-band .lite-paths {
+  font-size: clamp(.78rem, 1vw, .95rem);
+  line-height: 1.35;
+}
+
+/* AI strategic framing: explicit upstream thesis before the unchanged Twin Orbit. */
+.current-locked-ai .integration-copy h1 {
+  max-width: none;
+  margin-top: 1.8rem;
+  font-size: clamp(2.8rem, 3.1vw, 4.1rem);
+  line-height: .9;
+  white-space: normal;
+}
+
+.ai-strategic-framing {
+  display: grid;
+  grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 2.4vw, 2.4rem);
+  align-items: start;
+}
+
+.ai-strategic-framing h1 {
+  margin-top: 1.8rem;
+}
+
+.ai-framing-secondary {
+  padding-top: 2rem;
+  border-top: 1px solid var(--twin-rule-soft);
+}
+
+.ai-framing-kicker {
+  color: var(--twin-ivory);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.ai-framing-secondary ul {
+  display: grid;
+  gap: 1.05rem;
+  margin-top: 1.5rem;
+}
+
+.ai-framing-secondary li {
+  color: var(--twin-stone);
+  font-size: clamp(.85rem, 1.05vw, 1rem);
+  line-height: 1.3;
+}
+
+.current-locked-ai .ai-workflow-thesis {
+  max-width: 27rem;
+  margin-top: clamp(2.25rem, 4vw, 4rem);
+  padding-top: 1.05rem;
+  border-top: 1px solid var(--twin-rule-soft);
+  color: var(--twin-ivory);
+  font-size: clamp(1rem, 1.25vw, 1.1rem);
+  line-height: 1.35;
+}
+
+/* About / Formation: one left identity column and one right narrative + diptych field. */
+.about-formation-recomposed {
+  padding-block: clamp(4.5rem, 6vw, 6.5rem) clamp(4.5rem, 6.5vw, 6.75rem);
+}
+
+.about-formation-intro {
+  grid-template-columns: minmax(0, .42fr) minmax(0, .58fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.about-formation-heading h2 {
+  max-width: 12ch;
+  margin-top: 1.8rem;
+  font-size: clamp(2.9rem, 5.1vw, 5.45rem);
+}
+
+.about-formation-right {
+  min-width: 0;
+  padding-top: .2rem;
+}
+
+.about-formation-right .about-copy {
+  max-width: none;
+  padding-top: 0;
+}
+
+.about-formation-right .formation-diptych {
+  margin-top: clamp(2rem, 3.2vw, 3.25rem);
+}
+
+.about-formation-right .formation-diptych figure {
+  height: clamp(13.5rem, 16vw, 15.5rem);
+}
+
+/* Beyond Work: two new real photographs as one editorial spread. */
+.beyond-work-recomposed {
+  padding-block: clamp(4.5rem, 6vw, 6.5rem) clamp(4.75rem, 6.5vw, 6.75rem);
+}
+
+.sheltie-spread {
+  display: grid;
+  grid-template-columns: minmax(0, 2.42fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 2.25vw, 2.5rem);
+  align-items: end;
+  margin-top: clamp(2rem, 3vw, 3rem);
+}
+
+.sheltie-dominant {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  width: auto;
+  aspect-ratio: auto;
+  overflow: visible;
+}
+
+.sheltie-supporting {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  width: auto;
+  aspect-ratio: auto;
+  overflow: visible;
+}
+
+.sheltie-image-frame {
+  min-height: 0;
+  aspect-ratio: 1.6 / 1;
+  overflow: clip;
+}
+
+.sheltie-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 58%;
+  transform: none;
+  filter: saturate(.94) contrast(.99) brightness(1.01);
+}
+
+.sheltie-dominant .sheltie-image-frame img {
+  object-position: 50% 58%;
+}
+
+.sheltie-supporting .sheltie-image-frame {
+  aspect-ratio: 1 / 1;
+}
+
+.sheltie-supporting .sheltie-image-frame img {
+  object-position: 50% 74%;
+}
+
+@media (max-width: 1100px) {
+  .current-locked-case01 .preview-featured-header {
+    grid-template-columns: minmax(0, 1.15fr) minmax(11rem, .6fr);
+    gap: 2.5rem;
+  }
+
+  .current-locked-ai .integration-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .current-locked-ai .integration-copy,
+  .current-locked-ai .integration-map {
+    grid-column: 1;
+  }
+
+  .current-locked-ai .integration-map {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-grid .portrait-wrap {
+    margin-right: 0;
+  }
+
+  .current-locked-case01 .preview-featured-header {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .current-locked-case01 .preview-featured-header h2 {
+    max-width: 24ch;
+    font-size: clamp(2.8rem, 7vw, 4.8rem);
+  }
+
+  .current-locked-case01 .preview-featured-header .preview-meta {
+    text-align: left;
+  }
+
+  .about-formation-intro {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-formation-heading h2 {
+    max-width: 14ch;
+    margin-top: 1.5rem;
+    font-size: clamp(3rem, 8vw, 4.8rem);
+  }
+
+  .sheltie-dominant {
+    width: 100%;
+  }
+
+  .sheltie-supporting {
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-grid .portrait-wrap {
+    margin-left: -20px;
+    margin-right: 0;
+    width: calc(100% + 20px);
+  }
+
+  .current-locked-case01 .preview-featured-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .current-locked-case01 .preview-featured-header h2 {
+    max-width: 100%;
+    font-size: clamp(2.35rem, 10.8vw, 3.9rem);
+  }
+
+  .current-locked-case01 .embedded-decision-artifact .evidence-plate {
+    display: block;
+    padding-block: 2.2rem 1.5rem;
+  }
+
+  .current-locked-case01 .embedded-decision-artifact .before-column {
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--growth-rule);
+  }
+
+  .current-locked-case01 .embedded-decision-artifact .after-field {
+    padding: 2.2rem 0 0;
+  }
+
+  .current-locked-case01 .judgment-band {
+    margin-top: 2.4rem;
+  }
+
+  .current-locked-case01 .judgment-band .judgment-title {
+    max-width: 14ch;
+    font-size: 2rem;
+  }
+
+  .ai-strategic-framing {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .current-locked-ai .integration-copy h1,
+  .ai-strategic-framing h1 {
+    max-width: 10ch;
+    margin-top: 1.7rem;
+    font-size: clamp(3.1rem, 14vw, 4.8rem);
+  }
+
+  .ai-framing-secondary {
+    padding-top: 1.35rem;
+  }
+
+  .current-locked-ai .ai-workflow-thesis {
+    margin-top: 2rem;
+  }
+
+  .about-formation-right .formation-diptych {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2.25rem;
+  }
+
+  .about-formation-right .formation-diptych figure {
+    height: calc((100vw - (2 * var(--pad))) / 1.72 + 2.15rem);
+  }
+
+  .sheltie-spread {
+    grid-template-columns: 1fr;
+    margin-top: 2.25rem;
+  }
+
+  .sheltie-dominant {
+    width: 100%;
+  }
+
+  .sheltie-supporting {
+    width: 82%;
+    margin-left: auto;
+  }
+
+  .sheltie-image-frame {
+    aspect-ratio: 1.6 / 1;
+  }
+
+  .sheltie-supporting .sheltie-image-frame {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 380px) {
+  .current-locked-case01 .preview-featured-header h2 {
+    font-size: clamp(2.15rem, 10.7vw, 2.7rem);
+  }
+}
+
+/* v1.4 first-principles semantic correction. */
+.current-locked-case01 .case-thesis-stack {
+  max-width: 34rem;
+}
+
+.current-locked-case01 .preview-judgment {
+  max-width: 19ch;
+  font-size: clamp(1.9rem, 3.2vw, 3.45rem);
+  line-height: 1.02;
+}
+
+.current-locked-case01 .preview-secondary {
+  max-width: 32ch;
+  margin-top: 1.15rem;
+  color: var(--growth-stone);
+  font-size: clamp(1.05rem, 1.55vw, 1.65rem);
+  line-height: 1.35;
+  letter-spacing: -.02em;
+}
+
+.current-locked-case01 .preview-proof {
+  margin-top: clamp(2.5rem, 5vw, 5rem);
+}
+
+.current-locked-ai .integration-layout {
+  grid-template-columns: minmax(0, .52fr) minmax(0, 1fr);
+  gap: clamp(2.5rem, 5vw, 5rem);
+}
+
+.current-locked-ai .integration-copy h1 {
+  max-width: none;
+  margin-top: 2rem;
+  font-size: clamp(2.65rem, 4.25vw, 4.6rem);
+  line-height: .91;
+  white-space: normal;
+}
+
+.current-locked-ai .ai-workflow-thesis {
+  max-width: 31rem;
+  margin-top: clamp(2rem, 3.5vw, 3.5rem);
+  padding-top: 1.05rem;
+  border-top: 1px solid var(--twin-rule-soft);
+  color: var(--twin-muted);
+  font-size: clamp(1rem, 1.18vw, 1.12rem);
+  line-height: 1.52;
+}
+
+.about-formation-intro {
+  grid-template-columns: minmax(0, .42fr) minmax(0, .58fr);
+}
+
+.about-formation-heading h2 {
+  max-width: 14ch;
+  font-size: clamp(2.7rem, 4.5vw, 4.85rem);
+}
+
+.sheltie-spread {
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+  margin-top: clamp(2rem, 2.8vw, 2.75rem);
+}
+
+.sheltie-dominant {
+  width: min(78%, 72rem);
+}
+
+.sheltie-supporting {
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .current-locked-ai .integration-artifact .edge-rail {
+    top: 14%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .current-locked-ai .integration-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-formation-intro {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .current-locked-case01 .preview-judgment {
+    max-width: 21ch;
+    font-size: 2rem;
+  }
+
+  .current-locked-case01 .preview-secondary {
+    max-width: 31ch;
+    font-size: 1.18rem;
+  }
+
+  .current-locked-ai .integration-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(2.8rem, 13vw, 4.35rem);
+  }
+
+  .current-locked-ai .ai-workflow-thesis {
+    margin-top: 2rem;
+  }
+
+  .sheltie-spread {
+    display: flex;
+    margin-top: 2.25rem;
+  }
+
+  .sheltie-dominant {
+    width: 100%;
+  }
+}
