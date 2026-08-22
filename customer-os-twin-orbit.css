@@ -252,7 +252,6 @@
 .twin-principle { padding-bottom: .5rem; text-align: center; letter-spacing: .06em; }
 .twin-caption { padding-bottom: 2rem; text-align: center; }
 
-/* Integration preview: thesis on the left, evidence map on the right. */
 .twin-integration .integration-section { min-height: 100svh; display: grid; align-items: center; }
 .twin-integration .integration-layout {
   display: grid;
@@ -270,7 +269,7 @@
   text-transform: uppercase;
 }
 
-.integration-copy h1 {
+.integration-copy h2 {
   max-width: 9ch;
   margin-top: 2rem;
   font-size: clamp(3.8rem, 6.7vw, 7.3rem);
@@ -322,7 +321,7 @@
   .rail-human { right: 1%; }
   .learning-field { right: 13%; left: 13%; }
   .twin-integration .integration-layout { gap: 2.5rem; }
-  .integration-copy h1 { font-size: clamp(3.4rem, 7vw, 6rem); }
+  .integration-copy h2 { font-size: clamp(3.4rem, 7vw, 6rem); }
 }
 
 @media (max-width: 900px) {
@@ -362,7 +361,7 @@
 
   .twin-integration .integration-section { display: block; }
   .twin-integration .integration-layout { grid-template-columns: 1fr; gap: 3rem; padding-block: 4rem 3rem; }
-  .integration-copy h1 { max-width: 10ch; }
+  .integration-copy h2 { max-width: 10ch; }
   .integration-copy p:last-child { margin-top: 2rem; }
   .integration-artifact { margin-top: 1rem; }
 
@@ -407,7 +406,7 @@
   .integration-meta { display: block; }
   .integration-meta span + span { display: block; margin-top: .6rem; }
   .integration-meta span:last-child { text-align: left; }
-  .integration-copy h1 { max-width: 9ch; font-size: clamp(3.2rem, 15vw, 5rem); }
+  .integration-copy h2 { max-width: 9ch; font-size: clamp(3.2rem, 15vw, 5rem); }
   .integration-copy p:last-child { max-width: 22rem; }
 }
 
