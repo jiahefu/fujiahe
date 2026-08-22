@@ -1062,6 +1062,7 @@ h1 {
   }
 
   nav a {
+    min-inline-size: 24px;
     padding-inline: 0.1rem;
     font-size: 0.75rem;
   }
